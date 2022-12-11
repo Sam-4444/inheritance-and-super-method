@@ -1,0 +1,23 @@
+class animal:
+    def __init__(self, name, food):
+        self.name = name
+        self.food = food
+
+    def eat(self):
+        print(f"{self.name} eats {self.food}")
+
+
+class cat(animal):
+    def __init__(self, name, food, drink):
+        super().__init__(name, food)
+        self.drink = drink
+
+    def eat(self):
+        print(f"{self.name} is a cat and it eats {self.food} and drinks {self.drink}")
+
+
+rex = animal("rex", "bone")
+rex.eat()
+
+tilly = cat("tilly", "meat", "milk")
+tilly.eat()
